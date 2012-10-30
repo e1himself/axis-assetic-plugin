@@ -1,0 +1,29 @@
+{
+    "hash": "6e1549c951b55054c4f88923ce1c85bc",
+    "packages": [
+        {
+            "package": "kriswallsmith/assetic",
+            "version": "dev-master",
+            "alias-pretty-version": "1.1.x-dev",
+            "alias-version": "1.1.9999999.9999999-dev"
+        },
+        {
+            "package": "kriswallsmith/assetic",
+            "version": "dev-master",
+            "source-reference": "a1b6fa1f7bb27c203b6c3cf7d0dd0184f8dffcdc",
+            "commit-date": "1351079542"
+        },
+        {
+            "package": "symfony/process",
+            "version": "v2.1.2"
+        }
+    ],
+    "packages-dev": null,
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "kriswallsmith/assetic": 20
+    }
+}

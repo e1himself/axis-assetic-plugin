@@ -1,0 +1,9 @@
+{
+  "config": {
+    "vendor-dir": "lib/vendor"
+  },
+
+  "require": {
+    "kriswallsmith/assetic": "dev-master"
+  }
+}
