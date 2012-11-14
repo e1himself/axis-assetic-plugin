@@ -1,17 +1,17 @@
 {
-    "hash": "6e1549c951b55054c4f88923ce1c85bc",
+    "hash": "cb990831e5fa500a3ed7f0f378e4ec44",
     "packages": [
-        {
-            "package": "kriswallsmith/assetic",
-            "version": "dev-master",
-            "alias-pretty-version": "1.1.x-dev",
-            "alias-version": "1.1.9999999.9999999-dev"
-        },
         {
             "package": "kriswallsmith/assetic",
             "version": "dev-master",
             "source-reference": "a1b6fa1f7bb27c203b6c3cf7d0dd0184f8dffcdc",
             "commit-date": "1351079542"
+        },
+        {
+            "package": "natxet/CssMin",
+            "version": "dev-master",
+            "source-reference": "ef023b701821e73858f6af457f5fdef96cf9cd4d",
+            "commit-date": "1329902120"
         },
         {
             "package": "symfony/process",
@@ -24,6 +24,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "kriswallsmith/assetic": 20
+        "kriswallsmith/assetic": 20,
+        "natxet/cssmin": 20
     }
 }

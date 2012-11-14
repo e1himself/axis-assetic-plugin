@@ -4,6 +4,7 @@
   },
 
   "require": {
-    "kriswallsmith/assetic": "dev-master"
+    "kriswallsmith/assetic": "dev-master",
+    "natxet/CssMin": "dev-master"
   }
 }
