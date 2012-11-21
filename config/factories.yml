@@ -1,0 +1,157 @@
+all:
+  assetic.filter_manager:
+    class: \Axis\S1\Assetic\FilterManager
+    parameters:
+      service_container:  context://service_container
+
+  # compiles CoffeeScript into Javascript
+  assetic.filter.coffee_script:
+    class:  \Assetic\Filter\CoffeeScriptFilter
+  #  parameters:
+  #    coffeePath: /usr/bin/coffee
+  #    nodePath:   /usr/bin/node
+    tag: assetic.filter
+
+  # embeds image data in your stylesheets
+  assetic.filter.css_embed:
+    class:  \Assetic\Filter\CssEmbedFilter
+    parameters:
+      jarPath: /path/to/cssembed.jar
+  #    javaPath: /usr/bin/java
+
+  # inlines imported stylesheets
+  assetic.filter.css_import:
+    class:  \Assetic\Filter\CssImportFilter
+  #  parameters:
+  #    importFilter:   ~
+    tag: assetic.filter
+
+  # minifies CSS
+  assetic.filter.css_min:
+    class:  \Assetic\Filter\CssMinFilter
+    tag: assetic.filter
+
+  # fixes relative URLs in CSS assets when moving to a new URL
+  assetic.filter.css_rewrite:
+    class:  \Assetic\Filter\CssRewriteFilter
+    tag: assetic.filter
+
+  # compiles Javascript using the Google Closure Compiler API
+  assetic.filter.google_closure.compilier_api:
+    class:  \Assetic\Filter\GoogleClosure\CompilerApiFilter
+    tag: assetic.filter
+
+  # compiles Javascript using the Google Closure Compiler JAR
+  assetic.filter.google_closure.compilier_jar:
+    class:  \Assetic\Filter\GoogleClosure\CompilerJarFilter
+    parameters:
+      jarPath: ~
+  #    javaPath: /usr/bin/java
+    tag: assetic.filter
+
+  # compiles Handlebars templates into Javascript
+  assetic.filter.handlebars:
+    class: \Assetic\Filter\HandlebarsFilter
+  #  parameters:
+  #    handlebarsPath: /usr/bin/handlebars
+  #    nodePath: ~
+    tag: assetic.filter
+
+  # optimizes your JPEGs
+  assetic.filter.jpegoptim:
+    class: \Assetic\Filter\JpegoptimFilter
+  #  parameters:
+  #    jpegoptimBin: /usr/bin/jpegoptim
+    tag: assetic.filter
+
+  # optimizes your JPEGs
+  assetic.filter.jpegtran:
+    class: \Assetic\Filter\JpegtranFilter
+  #  parameters:
+  #    jpegtranBin: /usr/bin/jpegoptim
+    tag: assetic.filter
+
+  # parses LESS into CSS (using less.js with node.js)
+  assetic.filter.less:
+    class: \Assetic\Filter\LessFilter
+  #  parameters:
+  #    nodeBin: /usr/bin/node
+  #    nodePaths: []
+    tag: assetic.filter
+
+  # parses LESS into CSS (using lessphp)
+  assetic.filter.lessphp:
+    class: \Assetic\Filter\LessphpFilter
+
+  # optimize your PNGs
+  assetic.filter.opti_png:
+    class: \Assetic\Filter\OptiPngFilter
+  #  parameters:
+  #    optipngBin: /usr/bin/optipng
+    tag: assetic.filter
+
+  # compresses Javascript using Dean Edwards's Packer
+  assetic.filter.packer:
+    class: \Assetic\Filter\PackerFilter
+    tag: assetic.filter
+
+  # optimize your PNGs
+  assetic.filter.pngout:
+    class: \Assetic\Filter\PngoutFilter
+  #  parameters:
+  #    pngoutBin: /usr/bin/pngout
+    tag: assetic.filter
+
+  # Compass CSS authoring framework
+  assetic.filter.compass:
+    class: \Assetic\Filter\CompassFilter
+  #  parameters:
+  #    compassPath: /usr/bin/compass
+  #    rubyPath: ~
+    tag: assetic.filter
+
+  # parses SASS into CSS
+  assetic.filter.sass:
+    class: \Assetic\Filter\Sass\SassFilter
+  #  parameters:
+  #    sassPath: /usr/bin/sass
+  #    rubyPath: ~
+    tag: assetic.filter
+
+  # parses SCSS into CSS
+  assetic.filter.scss:
+    class: \Assetic\Filter\Sass\ScssFilter
+  #  parameters:
+  #    sassPath: /usr/bin/sass
+  #    rubyPath: ~
+    tag: assetic.filter
+
+  # Sprockets Javascript dependency management
+  assetic.filter.sprockets:
+    class: \Assetic\Filter\SprocketsFilter
+  #  parameters:
+  #    sprocketsLib: ~
+  #    rubyBin: /usr/bin/ruby
+    tag: assetic.filter
+
+  # parses STYL into CSS
+  assetic.filter.stylus:
+    class: \Assetic\Filter\StylusFilter
+  #  parameters:
+  #    nodeBin: /usr/bin/node
+  #    nodePaths: []
+    tag: assetic.filter
+
+  assetic.filter.yui.css_compressor:
+    class:  \Assetic\Filter\Yui\CssCompressorFilter
+    parameters:
+      jarPath:  /path/to/yuicompressor.jar
+  #    javaPath: /usr/bin/java
+    tag: assetic.filter
+
+  assetic.filter.yui.js_compressor:
+    class:  \Assetic\Filter\Yui\JsCompressorFilter
+    parameters:
+      jarPath:  /path/to/yuicompressor.jar
+  #    javaPath: /usr/bin/java
+    tag: assetic.filter
