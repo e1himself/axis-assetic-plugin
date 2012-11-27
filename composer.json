@@ -3,7 +3,12 @@
     "vendor-dir": "lib/vendor"
   },
 
+  "name": "axis/axis-assetic-plugin",
+  "description": "symfony 1.x plugin for Assetic.",
+  "type": "symfony1-plugin",
+
   "require": {
+    "composer/installers": "*",
     "kriswallsmith/assetic": "dev-master",
     "natxet/CssMin": "dev-master"
   }
