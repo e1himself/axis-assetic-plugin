@@ -12,6 +12,8 @@
     }
   ],
 
+  "minimum-stability": "dev",
+
   "autoload": {
     "psr-0": {
       "Axis\\S1\\Assetic": "lib/"
@@ -21,7 +23,10 @@
   "require": {
     "php": ">=5.3.0",
     "composer/installers": "*",
-    "kriswallsmith/assetic": "dev-master",
-    "natxet/CssMin": "dev-master"
+    "kriswallsmith/assetic": "dev-master"
+  },
+
+  "suggest": {
+
   }
 }
