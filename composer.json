@@ -2,12 +2,19 @@
   "name": "axis/axis-assetic-plugin",
   "description": "symfony 1.x plugin for Assetic.",
   "type": "symfony1-plugin",
+  "keywords": ["symfony", "assetic", "asset manager", "minifier"],
   "license": "MIT",
   "homepage": "https://www.assembla.com/spaces/axis-assetic-plugin/",
+  "authors": [
+    {
+      "name": "Ivan Voskoboynyk",
+      "email": "ioann.voskoboynyk@gmail.com"
+    }
+  ],
 
   "autoload": {
     "psr-0": {
-      "Axis\\S1\\Assetic": "lib"
+      "Axis\\S1\\Assetic": "lib/"
     }
   },
 
