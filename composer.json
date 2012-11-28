@@ -1,13 +1,18 @@
 {
-  "config": {
-    "vendor-dir": "lib/vendor"
-  },
-
   "name": "axis/axis-assetic-plugin",
   "description": "symfony 1.x plugin for Assetic.",
   "type": "symfony1-plugin",
+  "license": "MIT",
+  "homepage": "https://www.assembla.com/spaces/axis-assetic-plugin/",
+
+  "autoload": {
+    "psr-0": {
+      "Axis\\S1\\Assetic": "lib"
+    }
+  },
 
   "require": {
+    "php": ">=5.3.0",
     "composer/installers": "*",
     "kriswallsmith/assetic": "dev-master",
     "natxet/CssMin": "dev-master"
