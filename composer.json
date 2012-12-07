@@ -1,17 +1,18 @@
 {
   "name": "axis/axis-assetic-plugin",
-  "description": "symfony 1.x plugin for Assetic.",
+  "description": "symfony 1.x plugin that integrates Assetic into symfony",
   "type": "symfony1-plugin",
   "keywords": ["symfony", "assetic", "asset manager", "minifier"],
   "license": "MIT",
-  "homepage": "https://www.assembla.com/spaces/axis-assetic-plugin/",
+  "homepage": "https://github.com/e1himself/axis-assetic-plugin",
   "authors": [
     {
       "name": "Ivan Voskoboynyk",
-      "email": "ioann.voskoboynyk@gmail.com"
+      "email": "ioann.voskoboynyk@gmail.com",
+      "homepage": "https://github.com/e1himself"
     }
   ],
-  "version": "0.1.0",
+  "version": "1.0.0",
 
   "minimum-stability": "dev",
 
@@ -24,6 +25,11 @@
   "require": {
     "php": ">=5.3.0",
     "composer/installers": "*",
-    "kriswallsmith/assetic": "dev-master"
+    "kriswallsmith/assetic": "dev-master",
+    "axis/axis-service-container-plugin": "dev-master"
+  },
+
+  "suggest": {
+    "natxet/CssMin": "Needed to use CssMin asset filter"
   }
 }
