@@ -30,6 +30,10 @@
   },
 
   "suggest": {
-    "natxet/CssMin": "Needed to use CssMin asset filter"
+    "natxet/CssMin": "Needed to use CssMin asset filter",
+    "leafo/lessphp": "Needed to use LessPHP compiler",
+    "nick4fake/jsmin": "Needed for JsMin filter",
+    "ptachoire/cssembed": "Needed for PhpCssEmbed filter",
+    "leafo/scssphp": "Needed for ScssPhp filter"
   }
 }
