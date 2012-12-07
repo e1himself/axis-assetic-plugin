@@ -1,8 +1,13 @@
 {
   "name": "axis/axis-assetic-plugin",
   "description": "symfony 1.x plugin that integrates Assetic into symfony",
-  "type": "symfony1-plugin",
   "keywords": ["symfony", "assetic", "asset manager", "minifier"],
+
+  "type": "symfony1-plugin",
+  "extra": {
+    "installer-name": "AxisHybridTemplatingPlugin"
+  },
+
   "license": "MIT",
   "homepage": "https://github.com/e1himself/axis-assetic-plugin",
   "authors": [
