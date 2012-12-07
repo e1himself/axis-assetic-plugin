@@ -5,7 +5,7 @@
 
   "type": "symfony1-plugin",
   "extra": {
-    "installer-name": "AxisHybridTemplatingPlugin"
+    "installer-name": "AxisAsseticPlugin"
   },
 
   "license": "MIT",
