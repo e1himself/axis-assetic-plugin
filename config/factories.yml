@@ -1,8 +1,19 @@
 all:
+  ################
+  # FILTER MANAGER
+  ################
   assetic.filter_manager:
     class: \Axis\S1\Assetic\FilterManager
     parameters:
       service_container:  context://service_container
+
+  ##################
+  # STANDARD FILTERS
+  ##################
+
+  # A filter that wraps callables.
+  assetic.filter.callables:
+    class:  \Assetic\Filter\CallablesFilter
 
   # compiles CoffeeScript into Javascript
   assetic.filter.coffee_script:
@@ -28,17 +39,26 @@ all:
 
   # minifies CSS
   assetic.filter.css_min:
-    class:  \Assetic\Filter\CssMinFilter
+    class: \Assetic\Filter\CssMinFilter
     tag: assetic.filter
 
   # fixes relative URLs in CSS assets when moving to a new URL
   assetic.filter.css_rewrite:
-    class:  \Assetic\Filter\CssRewriteFilter
+    class: \Assetic\Filter\CssRewriteFilter
     tag: assetic.filter
+
+  # Filter for the Google Closure Stylesheets Compiler JAR.
+  assetic.filter.gss:
+    class: \Assetic\Filter\GssFilter
+    parameters:
+      jarPath: ~
+#      javaPath: /usr/bin/java
+    tag: assetic.filter
+
 
   # compiles Javascript using the Google Closure Compiler API
   assetic.filter.google_closure.compilier_api:
-    class:  \Assetic\Filter\GoogleClosure\CompilerApiFilter
+    class: \Assetic\Filter\GoogleClosure\CompilerApiFilter
     tag: assetic.filter
 
   # compiles Javascript using the Google Closure Compiler JAR
@@ -71,6 +91,16 @@ all:
   #    jpegtranBin: /usr/bin/jpegoptim
     tag: assetic.filter
 
+  # minimizes Javascripts
+  assetic.filter.js_min:
+    class: \Assetic\Filter\JSMinFilter
+    tag: assetic.filter
+
+  # minimizes Javascripts
+  assetic.filter.js_min_plus:
+    class: \Assetic\Filter\JSMinPlusFilter
+    tag: assetic.filter
+
   # parses LESS into CSS (using less.js with node.js)
   assetic.filter.less:
     class: \Assetic\Filter\LessFilter
@@ -90,9 +120,21 @@ all:
   #    optipngBin: /usr/bin/optipng
     tag: assetic.filter
 
+  # Runs assets through Packager.
+  assetic.filter.packager:
+    class: \Assetic\Filter\PackagerFilter
+    parameters:
+      packages: []
+    tag: assetic.filter
+
   # compresses Javascript using Dean Edwards's Packer
   assetic.filter.packer:
     class: \Assetic\Filter\PackerFilter
+    tag: assetic.filter
+
+  # A filter that embed url directly into css
+  assetic.filter.packer:
+    class: \Assetic\Filter\PhpCssEmbedFilter
     tag: assetic.filter
 
   # optimize your PNGs
@@ -100,6 +142,11 @@ all:
     class: \Assetic\Filter\PngoutFilter
   #  parameters:
   #    pngoutBin: /usr/bin/pngout
+    tag: assetic.filter
+
+  # Loads SCSS files using the PHP implementation of scss, scssphp.
+  assetic.filter.scssphp:
+    class: \Assetic\Filter\ScssphpFilter
     tag: assetic.filter
 
   # Compass CSS authoring framework
@@ -140,6 +187,22 @@ all:
   #  parameters:
   #    nodeBin: /usr/bin/node
   #    nodePaths: []
+    tag: assetic.filter
+
+  # UglifyCss filter.
+  assetic.filter.uflify_css:
+    class: \Assetic\Filter\UglifyCssFilter
+    parameters:
+      uglifyCssPath: ~
+#      nodeJsPath: ~
+    tag: assetic.filter
+
+  # parses STYL into JS
+  assetic.filter.uflify_js:
+    class: \Assetic\Filter\UglifyJsFilter
+    parameters:
+      uglifyJsPath: ~
+#      nodeJsPath: ~
     tag: assetic.filter
 
   assetic.filter.yui.css_compressor:
