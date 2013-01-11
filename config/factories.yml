@@ -190,19 +190,27 @@ all:
     tag: assetic.filter
 
   # UglifyCss filter.
-  assetic.filter.uflify_css:
+  assetic.filter.uglify_css:
     class: \Assetic\Filter\UglifyCssFilter
     parameters:
-      uglifyCssPath: ~
-#      nodeJsPath: ~
+      uglifycssBin: ~
+#      nodeBin: ~
     tag: assetic.filter
 
-  # parses STYL into JS
-  assetic.filter.uflify_js:
+  # UglifyJS filter
+  assetic.filter.uglify_js:
     class: \Assetic\Filter\UglifyJsFilter
     parameters:
-      uglifyJsPath: ~
-#      nodeJsPath: ~
+      uglifyjsBin: ~
+#      nodeBin: ~
+    tag: assetic.filter
+
+  # UglifyJS2 filter
+  assetic.filter.uglify_js2:
+    class: \Assetic\Filter\UglifyJs2Filter
+    parameters:
+      uglifyjsBin: ~
+#      nodeBin: ~
     tag: assetic.filter
 
   assetic.filter.yui.css_compressor:
